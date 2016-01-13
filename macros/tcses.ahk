@@ -1,14 +1,3 @@
-Menu, TCSESMacros, Add, Default, SetTcsesDefaultMacros
-Menu, TCSESMacros, Add, ACDVs, SetTcsesAcdvMacros
-Menu, TCSESMacros, Add, CSLN, SetTcsesCslnMacros
-Menu, TCSESMacros, Add, Lump Sum Liens, SetTcsesLumpSumMacros
-Menu, TCSESMacros, Add, Restricted Licenses, SetTcsesRluMacros
-
-Menu, Tray, Add, TCSES Macros, :TCSESMacros
-
-Menu, Tray, NoStandard
-Menu, Tray, Standard
-
 SetTcsesDefaultMacros:
   TCSESMacro1 := "TcsesRluMailMacro"
   TCSESMacro2 := "TcsesMailMacro"

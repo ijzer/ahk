@@ -134,12 +134,11 @@ $Numpad3::
 		
 $NumpadDiv::
   dual.combo()
-  if (GetKeyState("F23") && GetKeyState("F24")) {
-    dual.Send("{NumpadDiv}")
-  } else if (GetKeyState("F23")) {
+  if (GetKeyState("F23")) {
     dual.Send("{NumpadDiv}")
   } else if (GetKeyState("F24")) {
-    dual.Send("{NumpadDiv}")
+    if IsLabel(ExcelMacro1)
+      Gosub %ExcelMacro1%
   } else {
     Send (
   }
@@ -163,11 +162,11 @@ $NumpadSub::
   if (GetKeyState("F23") && GetKeyState("F24")) {
     dual.Send("{NumpadSub}")
   } else if (GetKeyState("F23")) {
-    dual.Send("{NumpadSub}")
+    dual.Send("{NumpadAdd}")
   } else if (GetKeyState("F24")) {
     dual.Send("{NumpadSub}")
   } else {
-    Send {NumpadAdd}
+    Send {NumpadSub}
   }
   return
 
