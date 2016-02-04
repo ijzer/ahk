@@ -12,10 +12,10 @@
 *Enter UP::dual.combine("RAlt", "Enter")
 
 *LShift::
-*LShift UP::dual.combine("LShift", "Delete", {delay: 20, doublePress: -1})
+*LShift UP::dual.combine("LShift", "Delete", {delay: 20, doublePress: 100})
 
 *RShift::
-*RShift UP::dual.combine("RShift", "Backspace", {delay: 20, doublePress: -1})
+*RShift UP::dual.combine("RShift", "Backspace", {delay: 20, doublePress: 100})
 
 *Space::
 *Space UP::dual.combine("LCtrl", "Space")
@@ -34,7 +34,5 @@ RAlt::F21
 LWin::F23
 RWin::F23
 
-AppsKey::LWin
-AppsKey & l::DllCall("LockWorkStation")
 #If
 #InputLevel 0

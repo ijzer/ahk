@@ -1,7 +1,7 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 #SingleInstance force
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SendMode Play
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 SetCapsLockState AlwaysOff
@@ -18,11 +18,6 @@ Menu, TCSESMacros, Add, Restricted Licenses, SetTcsesRluMacros
 
 Menu, Tray, Add, TCSES Macros, :TCSESMacros
 GoSub SetTcsesDefaultMacros
-
-Menu, ExcelMacros, Add, Default, SetExcelDefaultMacros
-
-Menu, Tray, Add, Excel Macros, :ExcelMacros
-GoSub SetExcelDefaultMacros
 
 Menu, Tray, NoStandard
 Menu, Tray, Standard
@@ -41,9 +36,9 @@ Menu, Tray, MainWindow
 #Include %A_ScriptDir%\layers\layers.ahk
 
 ;; numpads
-#Include %A_ScriptDir%\numpads\fn.ahk
-#Include %A_ScriptDir%\numpads\tcses.ahk
-#Include %A_ScriptDir%\numpads\excel.ahk
+#Include %A_ScriptDir%\applications\fn.ahk
+#Include %A_ScriptDir%\applications\tcses.ahk
+#Include %A_ScriptDir%\applications\excel.ahk
 
 ;; macros
 #Include %A_ScriptDir%\macros\fn.ahk
